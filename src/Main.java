@@ -2,18 +2,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Property propertyDealer = new Property("Magic", 20);
-        Property propertySupporter = new Property("Recovery", 20);
-        BodyInfo dealerBodyInfo = new BodyInfo(800, 600);
-        BodyInfo supporterBodyInfo = new BodyInfo(600, 500);
-        Moving dealerMoving = new Moving(new int[]{0, 0}, 5);
-        Moving supporterMoving = new Moving(new int[]{0, 0}, 3);
-        DealerAutoAttack dealerAutoAttack = new DealerAutoAttack(40, 20);
-        SupporterAutoAttack supporterAutoAttack = new SupporterAutoAttack(30, 15);
-        DealerSkill dealerSkill = new DealerSkill(40, 35);
-        SupporterSkill supporterSkill = new SupporterSkill(45, 40);
-        Dealer jinx = new Dealer(propertyDealer, dealerBodyInfo, dealerMoving, "jinx", "Dealer", dealerSkill, dealerAutoAttack);
-        Supporter soraka = new Supporter(propertySupporter, supporterBodyInfo, supporterMoving, "soraka", "supporter", supporterSkill, supporterAutoAttack);
+        Dealer jinx = new Dealer(
+                new Property("Magic", 20),
+                new BodyInfo(800, 600),
+                new Moving(new int[]{0, 0}, 5),
+                "jinx",
+                "Dealer",
+                new DealerSkill(40, 35),
+                new DealerAutoAttack(40, 20)
+        );
+
+        Supporter soraka = new Supporter(
+                new Property("Recovery", 20),
+                new BodyInfo(600, 500),
+                new Moving(new int[]{0, 0}, 3),
+                "soraka",
+                "Supporter",
+                new SupporterSkill(45, 40),
+                new SupporterAutoAttack(30, 15)
+        );
+
         Champion[] champions = {jinx, soraka};
 
         System.out.println("Game start!\n");
