@@ -11,8 +11,11 @@ public class DealerAutoAttack extends AutoAttack {
     @Override
     public void doAutoAttack(Champion champion) {
         Dealer dealer = (Dealer) champion;
+        Attack attack = new Attack();
+
         double damage = autoAttackPower + autoAttackPower * champion.getProperty().getPropertyPower() * 0.01;
-        System.out.println(champion.getName() + " attacked " + (int) damage + " HP.\n");
+        attack.doAttack(dealer, (int) damage);
+
         dealer.increaseTotalInflictionDamage((int) damage);
         dealer.getBodyInfo().decreaseHP(this.consumptionHP);
     }

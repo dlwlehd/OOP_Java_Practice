@@ -10,6 +10,7 @@ public class SupporterSkill extends Skill {
     @Override
     public void doSkill(Champion[] champions, Champion champion) {
         Supporter supporter = (Supporter) champion;
+        Recovery recovery = new Recovery();
         double healed = supporter.getTotalRecoveredHealth() * supporter.getProperty().getPropertyPower() * 0.1;
 
         supporter.getBodyInfo().decreaseHP(consumptionHP);
@@ -17,7 +18,7 @@ public class SupporterSkill extends Skill {
 
         for (Champion champ : champions) {
             champ.getBodyInfo().increaseHP((int) healed);
-            System.out.println(champ.getName() + " recovered " + (int) healed + " HP.");
+            recovery.doRecover(champ, (int) healed);
             supporter.increaseTotalRecoveredHealth((int) healed);
         }
     }
