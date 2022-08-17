@@ -1,0 +1,12 @@
+create Dealer 1 amo 100 100 0 0 10 0.2
+create TreasureBox 2 40 100 1 1 100
+attack 1 2
+attack 1 2
+move 1 2 3
+attack 2 1
+attack 1 2
+attack 1 2
+attack 1 2
+attack 1 2
+attack 1 2
+end

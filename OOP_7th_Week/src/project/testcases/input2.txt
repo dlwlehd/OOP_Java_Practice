@@ -1,0 +1,31 @@
+create Dealer 1 amo 100 150 0 0 10 0.5
+create Supporter 2 popo 100 200 10 5 10 2
+create MovingTreasureBox 3 50 100 8 7 100
+create ThickTreasureBox 4 50 100 7 4 200 5
+move 4 1 1
+attack 2 3
+attack 2 3
+attack 2 3
+attack 2 3
+attack 1 3
+attack 2 3
+move 3 -8 -7
+attack 2 1
+attack 2 1
+attack 2 1
+attack 2 1
+attack 2 1
+attack 2 1
+attack 2 1
+attack 2 1
+attack 2 1
+attack 2 1
+attack 1 4
+skill 2 allHeal 1 2
+attack 1 4
+skill 1 moreAttack!!! 4
+attack 1 4
+attack 1 4
+skill 1 moreAttack!!! 3
+skill 1 moreAttack!!! 4
+end
