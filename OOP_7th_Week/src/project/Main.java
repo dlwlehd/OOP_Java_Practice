@@ -174,6 +174,7 @@ public class Main {
 
         if (!(defender instanceof Hittable)) {
             System.out.println("Object is not hittable.");
+            return;
         }
 
         ((Attackable) attacker).attack(defender);
